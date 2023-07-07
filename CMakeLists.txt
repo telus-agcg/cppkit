@@ -22,7 +22,6 @@ if(NOT bzip2_POPULATED)
 endif()
 
 add_library (cppkit include/cppkit/ck_actor.h
-                    include/cppkit/ck_blob_tree.h
                     include/cppkit/ck_exception.h
                     include/cppkit/ck_file.h
                     include/cppkit/ck_logger.h
@@ -30,8 +29,6 @@ add_library (cppkit include/cppkit/ck_actor.h
                     include/cppkit/ck_nullable.h
                     include/cppkit/ck_server_threaded.h
                     include/cppkit/ck_sha_256.h
-                    include/cppkit/ck_socket_address.h
-                    include/cppkit/ck_socket.h
                     include/cppkit/ck_stack_trace.h
                     include/cppkit/ck_string_utils.h
                     include/cppkit/ck_time_utils.h
@@ -40,13 +37,10 @@ add_library (cppkit include/cppkit/ck_actor.h
                     include/cppkit/ck_memory_map.h
                     include/cppkit/ck_compression_utils.h
                     include/cppkit/3rdparty/fastlz/fastlz.h
-                    source/ck_blob_tree.cpp
                     source/ck_exception.cpp
                     source/ck_file.cpp
                     source/ck_logger.cpp
                     source/ck_sha_256.cpp
-                    source/ck_socket_address.cpp
-                    source/ck_socket.cpp
                     source/ck_stack_trace.cpp
                     source/ck_string_utils.cpp
                     source/ck_time_utils.cpp
