@@ -7,19 +7,7 @@ if(NOT CMAKE_BUILD_TYPE)
     set (CMAKE_BUILD_TYPE Debug)
 endif()
 
-set (CMAKE_CXX_STANDARD 14)
-
-FetchContent_Declare(
-    bzip2
-    GIT_REPOSITORY https://github.com/dicroce/bzip2-1.0.6
-    GIT_TAG 49f653a10e5104be9e5cb9ac39586499dbec261d
-)
-
-FetchContent_GetProperties(bzip2)
-if(NOT bzip2_POPULATED)
-  FetchContent_Populate(bzip2)
-  add_subdirectory(${bzip2_SOURCE_DIR} ${bzip2_BINARY_DIR})
-endif()
+add_subdirectory(bzip2)
 
 add_library (cppkit include/cppkit/ck_actor.h
                     include/cppkit/ck_exception.h
